@@ -1,0 +1,10 @@
+D:\LKS\Latihan\Provinsi\LKSProvFullSoft\bin\Debug\LKSProvFullSoft.exe.config
+D:\LKS\Latihan\Provinsi\LKSProvFullSoft\bin\Debug\LKSProvFullSoft.exe
+D:\LKS\Latihan\Provinsi\LKSProvFullSoft\bin\Debug\LKSProvFullSoft.pdb
+D:\LKS\Latihan\Provinsi\LKSProvFullSoft\obj\Debug\LKSProvFullSoft.csproj.AssemblyReference.cache
+D:\LKS\Latihan\Provinsi\LKSProvFullSoft\obj\Debug\LKSProvFullSoft.frmAdmin.resources
+D:\LKS\Latihan\Provinsi\LKSProvFullSoft\obj\Debug\LKSProvFullSoft.Properties.Resources.resources
+D:\LKS\Latihan\Provinsi\LKSProvFullSoft\obj\Debug\LKSProvFullSoft.csproj.GenerateResource.cache
+D:\LKS\Latihan\Provinsi\LKSProvFullSoft\obj\Debug\LKSProvFullSoft.csproj.CoreCompileInputs.cache
+D:\LKS\Latihan\Provinsi\LKSProvFullSoft\obj\Debug\LKSProvFullSoft.exe
+D:\LKS\Latihan\Provinsi\LKSProvFullSoft\obj\Debug\LKSProvFullSoft.pdb
