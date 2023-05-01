@@ -45,6 +45,22 @@ namespace LKSProvFullSoft
             path.CloseFigure();
 
             return path;
+
+            //create method with params rectangle rect and int radius
+            //declare var diameter equals to radius params * 2
+            //declare var size equals to new Size intanse params diameter, diameter
+            //declare var arc equals to new rectanglef intanse params rect.location, size;
+
+            //declare var path equals to new intanse of graphicspath()
+            //path start figure
+            //path add arc (arc, 180, 90)
+            //arc.x = rect.right - diameter
+            //path add arc (arc, 270, 90)
+            //arc.y = rect.bottom - diameter
+            //path add arc (arc, 0, 90)
+            //arc.x = rect.left
+            //path add arc (arch, 90, 90)
+            //close figure
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -54,6 +70,11 @@ namespace LKSProvFullSoft
 
             var path = RoundedPath(ClientRectangle, cornerRadius);
             Region = new Region(path);
+
+            //set graphics smooting mode to anti alias
+            //declare path variable equals to new intase of roundedpath(clientRectangle, corner radius)
+            //set the region equals to new intanse with path
+
         }
     }
 }

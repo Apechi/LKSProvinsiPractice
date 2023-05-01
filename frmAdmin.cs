@@ -122,6 +122,7 @@ namespace LKSProvFullSoft
             return result;
         }
 
+
         public void InputState(bool main, bool sc)
         {
             pnlInsert.Visible = main;
@@ -247,6 +248,17 @@ namespace LKSProvFullSoft
         {
             var tanggal = dtpTanggal.Value.ToString("yyyy-MM-dd");
             dgvActivity.DataSource = comp.GetSql($"select L.id_log as 'ID Log', U.nama as 'Nama', L.waktu as 'Waktu', L.aktivitas as 'Aktivitas' from tbl_log L inner join tbl_user U on L.id_user = U.id_user where L.waktu BETWEEN '{tanggal} 00:00:00' AND '{tanggal} 23:59:59'");
+        }
+
+        private void pnlActivity_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            comp.SetSql($"INSERT INTO tbl_log (aktivitas, id_user) VALUES ('Logout', {Gv.uid});");
+            Application.Restart();
         }
     }
 }

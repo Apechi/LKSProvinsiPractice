@@ -51,10 +51,10 @@ namespace LKSProvFullSoft
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlActivity = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.dgvActivity = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvActivity = new System.Windows.Forms.DataGridView();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.roundedPanel6 = new LKSProvFullSoft.RoundedPanel();
             this.btnFilter = new System.Windows.Forms.Button();
             this.roundedPanel5 = new LKSProvFullSoft.RoundedPanel();
@@ -97,8 +97,8 @@ namespace LKSProvFullSoft
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlActivity.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvActivity)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActivity)).BeginInit();
             this.roundedPanel6.SuspendLayout();
             this.roundedPanel5.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
@@ -162,7 +162,7 @@ namespace LKSProvFullSoft
             // 
             this.tbUserId.Location = new System.Drawing.Point(358, 168);
             this.tbUserId.Name = "tbUserId";
-            this.tbUserId.Size = new System.Drawing.Size(44, 24);
+            this.tbUserId.Size = new System.Drawing.Size(44, 21);
             this.tbUserId.TabIndex = 3;
             this.tbUserId.Visible = false;
             // 
@@ -172,7 +172,7 @@ namespace LKSProvFullSoft
             this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(671, 224);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(130, 31);
+            this.label8.Size = new System.Drawing.Size(102, 26);
             this.label8.TabIndex = 2;
             this.label8.Text = "Password";
             // 
@@ -182,7 +182,7 @@ namespace LKSProvFullSoft
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(664, 110);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(137, 31);
+            this.label7.Size = new System.Drawing.Size(108, 26);
             this.label7.TabIndex = 2;
             this.label7.Text = "Username";
             // 
@@ -192,7 +192,7 @@ namespace LKSProvFullSoft
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(693, 7);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 31);
+            this.label6.Size = new System.Drawing.Size(81, 26);
             this.label6.TabIndex = 2;
             this.label6.Text = "Alamat";
             // 
@@ -202,7 +202,7 @@ namespace LKSProvFullSoft
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(27, 224);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 31);
+            this.label5.Size = new System.Drawing.Size(89, 26);
             this.label5.TabIndex = 2;
             this.label5.Text = "Telepon";
             // 
@@ -212,7 +212,7 @@ namespace LKSProvFullSoft
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(28, 110);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 31);
+            this.label4.Size = new System.Drawing.Size(69, 26);
             this.label4.TabIndex = 2;
             this.label4.Text = "Nama";
             // 
@@ -222,7 +222,7 @@ namespace LKSProvFullSoft
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(28, 5);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 31);
+            this.label3.Size = new System.Drawing.Size(103, 26);
             this.label3.TabIndex = 2;
             this.label3.Text = "Tipe User";
             // 
@@ -294,7 +294,7 @@ namespace LKSProvFullSoft
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(343, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(187, 40);
+            this.label2.Size = new System.Drawing.Size(151, 31);
             this.label2.TabIndex = 2;
             this.label2.Text = "Kelola User";
             // 
@@ -304,7 +304,7 @@ namespace LKSProvFullSoft
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(135, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 39);
+            this.label1.Size = new System.Drawing.Size(89, 31);
             this.label1.TabIndex = 2;
             this.label1.Text = "Admin";
             // 
@@ -328,28 +328,18 @@ namespace LKSProvFullSoft
             this.pnlActivity.Controls.Add(this.label9);
             this.pnlActivity.Location = new System.Drawing.Point(375, 0);
             this.pnlActivity.Name = "pnlActivity";
-            this.pnlActivity.Size = new System.Drawing.Size(893, 686);
+            this.pnlActivity.Size = new System.Drawing.Size(893, 674);
             this.pnlActivity.TabIndex = 5;
+            this.pnlActivity.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlActivity_Paint);
             // 
-            // label9
+            // panel1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(36, 98);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(160, 31);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Pilih Tanggal";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(397, 22);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(197, 40);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "Log Activity";
+            this.panel1.Controls.Add(this.dgvActivity);
+            this.panel1.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(29, 219);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(828, 430);
+            this.panel1.TabIndex = 5;
             // 
             // dgvActivity
             // 
@@ -375,14 +365,25 @@ namespace LKSProvFullSoft
             this.dgvActivity.Size = new System.Drawing.Size(803, 402);
             this.dgvActivity.TabIndex = 4;
             // 
-            // panel1
+            // label10
             // 
-            this.panel1.Controls.Add(this.dgvActivity);
-            this.panel1.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(29, 219);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(828, 430);
-            this.panel1.TabIndex = 5;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(397, 22);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(158, 31);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Log Activity";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(36, 98);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(131, 25);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Pilih Tanggal";
             // 
             // roundedPanel6
             // 
@@ -425,7 +426,7 @@ namespace LKSProvFullSoft
             this.dtpTanggal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpTanggal.Location = new System.Drawing.Point(9, 11);
             this.dtpTanggal.Name = "dtpTanggal";
-            this.dtpTanggal.Size = new System.Drawing.Size(281, 29);
+            this.dtpTanggal.Size = new System.Drawing.Size(281, 25);
             this.dtpTanggal.TabIndex = 0;
             // 
             // roundedPanel4
@@ -472,6 +473,7 @@ namespace LKSProvFullSoft
             this.btnLogout.TabIndex = 0;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // roundedPanel2
             // 
@@ -581,7 +583,7 @@ namespace LKSProvFullSoft
             this.tbPassword.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPassword.Location = new System.Drawing.Point(3, 12);
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(292, 26);
+            this.tbPassword.Size = new System.Drawing.Size(292, 21);
             this.tbPassword.TabIndex = 0;
             // 
             // pnlTelp
@@ -601,7 +603,7 @@ namespace LKSProvFullSoft
             this.tbTelepon.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTelepon.Location = new System.Drawing.Point(4, 12);
             this.tbTelepon.Name = "tbTelepon";
-            this.tbTelepon.Size = new System.Drawing.Size(290, 26);
+            this.tbTelepon.Size = new System.Drawing.Size(290, 21);
             this.tbTelepon.TabIndex = 2;
             this.tbTelepon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbTelepon_KeyPress);
             // 
@@ -622,7 +624,7 @@ namespace LKSProvFullSoft
             this.tbUsername.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbUsername.Location = new System.Drawing.Point(3, 12);
             this.tbUsername.Name = "tbUsername";
-            this.tbUsername.Size = new System.Drawing.Size(292, 26);
+            this.tbUsername.Size = new System.Drawing.Size(292, 21);
             this.tbUsername.TabIndex = 0;
             this.tbUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbUsername_KeyPress);
             // 
@@ -643,7 +645,7 @@ namespace LKSProvFullSoft
             this.tbNama.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNama.Location = new System.Drawing.Point(4, 11);
             this.tbNama.Name = "tbNama";
-            this.tbNama.Size = new System.Drawing.Size(291, 26);
+            this.tbNama.Size = new System.Drawing.Size(291, 21);
             this.tbNama.TabIndex = 0;
             this.tbNama.Text = "Nama";
             this.tbNama.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNama_KeyPress);
@@ -665,7 +667,7 @@ namespace LKSProvFullSoft
             this.tbAlamat.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbAlamat.Location = new System.Drawing.Point(3, 11);
             this.tbAlamat.Name = "tbAlamat";
-            this.tbAlamat.Size = new System.Drawing.Size(291, 26);
+            this.tbAlamat.Size = new System.Drawing.Size(291, 21);
             this.tbAlamat.TabIndex = 0;
             // 
             // pnlTipeUser
@@ -692,7 +694,7 @@ namespace LKSProvFullSoft
             "Kasir"});
             this.cbTipeUser.Location = new System.Drawing.Point(3, 8);
             this.cbTipeUser.Name = "cbTipeUser";
-            this.cbTipeUser.Size = new System.Drawing.Size(288, 35);
+            this.cbTipeUser.Size = new System.Drawing.Size(288, 30);
             this.cbTipeUser.TabIndex = 0;
             // 
             // pnlTelepon
@@ -727,7 +729,7 @@ namespace LKSProvFullSoft
             this.tbSearch.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbSearch.Location = new System.Drawing.Point(10, 12);
             this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(236, 26);
+            this.tbSearch.Size = new System.Drawing.Size(236, 21);
             this.tbSearch.TabIndex = 0;
             // 
             // pnlDelete
@@ -801,7 +803,7 @@ namespace LKSProvFullSoft
             // 
             // frmAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1262, 673);
@@ -827,8 +829,8 @@ namespace LKSProvFullSoft
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlActivity.ResumeLayout(false);
             this.pnlActivity.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvActivity)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActivity)).EndInit();
             this.roundedPanel6.ResumeLayout(false);
             this.roundedPanel5.ResumeLayout(false);
             this.roundedPanel4.ResumeLayout(false);

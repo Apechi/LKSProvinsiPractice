@@ -110,5 +110,10 @@ namespace LKSProvFullSoft
                 Login();
             }
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

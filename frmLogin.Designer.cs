@@ -53,7 +53,7 @@ namespace LKSProvFullSoft
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(547, 234);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 40);
+            this.label1.Size = new System.Drawing.Size(142, 31);
             this.label1.TabIndex = 4;
             this.label1.Text = "FOOD XYZ";
             // 
@@ -136,7 +136,7 @@ namespace LKSProvFullSoft
             this.tbPassword.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tbPassword.Location = new System.Drawing.Point(13, 14);
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(361, 23);
+            this.tbPassword.Size = new System.Drawing.Size(361, 19);
             this.tbPassword.TabIndex = 1;
             this.tbPassword.Text = "Password";
             this.tbPassword.Enter += new System.EventHandler(this.tbPassword_Enter);
@@ -162,7 +162,7 @@ namespace LKSProvFullSoft
             this.tbUsername.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tbUsername.Location = new System.Drawing.Point(13, 13);
             this.tbUsername.Name = "tbUsername";
-            this.tbUsername.Size = new System.Drawing.Size(361, 23);
+            this.tbUsername.Size = new System.Drawing.Size(361, 19);
             this.tbUsername.TabIndex = 0;
             this.tbUsername.Text = "User Name";
             this.tbUsername.Enter += new System.EventHandler(this.tbUsername_Enter);
@@ -170,7 +170,7 @@ namespace LKSProvFullSoft
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1262, 602);
@@ -184,6 +184,7 @@ namespace LKSProvFullSoft
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmLogin";
             this.Text = "frmLogin";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.roundedPanel4.ResumeLayout(false);
             this.roundedPanel3.ResumeLayout(false);
