@@ -23,18 +23,14 @@ namespace LKSProvFullSoft
 
         private void tbUsername_Enter(object sender, EventArgs e)
         {
-            if (tbUsername.Text == "User Name")
-            {
-                tbUsername.Text = "";
-            }
+            if (tbUsername.Text != "User Name") return;
+            tbUsername.Text = "";
         }
 
         private void tbUsername_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(tbUsername.Text))
-            {
-                tbUsername.Text = "User Name";
-            }
+            if (tbUsername.Text != "") return;
+            tbUsername.Text = "User Name";
         }
 
         private void tbPassword_Enter(object sender, EventArgs e)
@@ -113,7 +109,6 @@ namespace LKSProvFullSoft
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

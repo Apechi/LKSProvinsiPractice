@@ -21,3 +21,16 @@ D:\Semkolah\LOMBA COY\LKSProvinsiPractice\obj\Debug\LKSProvFullSoft.csproj.CoreC
 D:\Semkolah\LOMBA COY\LKSProvinsiPractice\obj\Debug\LKSProvFullSoft.exe
 D:\Semkolah\LOMBA COY\LKSProvinsiPractice\obj\Debug\LKSProvFullSoft.pdb
 D:\Semkolah\LOMBA COY\LKSProvinsiPractice\obj\Debug\LKSProvFullSoft.frmGudang.resources
+D:\LKS\Latihan\Provinsi\LKSProvinsiPractice\bin\Debug\LKSProvFullSoft.exe.config
+D:\LKS\Latihan\Provinsi\LKSProvinsiPractice\bin\Debug\LKSProvFullSoft.exe
+D:\LKS\Latihan\Provinsi\LKSProvinsiPractice\bin\Debug\LKSProvFullSoft.pdb
+D:\LKS\Latihan\Provinsi\LKSProvinsiPractice\obj\Debug\LKSProvFullSoft.csproj.AssemblyReference.cache
+D:\LKS\Latihan\Provinsi\LKSProvinsiPractice\obj\Debug\LKSProvFullSoft.frmAdmin.resources
+D:\LKS\Latihan\Provinsi\LKSProvinsiPractice\obj\Debug\LKSProvFullSoft.frmGudang.resources
+D:\LKS\Latihan\Provinsi\LKSProvinsiPractice\obj\Debug\LKSProvFullSoft.frmLogin.resources
+D:\LKS\Latihan\Provinsi\LKSProvinsiPractice\obj\Debug\LKSProvFullSoft.Properties.Resources.resources
+D:\LKS\Latihan\Provinsi\LKSProvinsiPractice\obj\Debug\LKSProvFullSoft.csproj.GenerateResource.cache
+D:\LKS\Latihan\Provinsi\LKSProvinsiPractice\obj\Debug\LKSProvFullSoft.csproj.CoreCompileInputs.cache
+D:\LKS\Latihan\Provinsi\LKSProvinsiPractice\obj\Debug\LKSProvFullSoft.exe
+D:\LKS\Latihan\Provinsi\LKSProvinsiPractice\obj\Debug\LKSProvFullSoft.pdb
+D:\LKS\Latihan\Provinsi\LKSProvinsiPractice\obj\Debug\LKSProvFullSoft.frmKasir.resources

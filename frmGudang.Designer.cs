@@ -36,6 +36,7 @@ namespace LKSProvFullSoft
             this.pnlSave = new LKSProvFullSoft.RoundedPanel();
             this.btnSave = new System.Windows.Forms.Button();
             this.gbInput = new System.Windows.Forms.Panel();
+            this.tbIdBarang = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -74,6 +75,11 @@ namespace LKSProvFullSoft
             this.pnlInsert = new LKSProvFullSoft.RoundedPanel();
             this.btnInsert = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.roundedPanel7 = new LKSProvFullSoft.RoundedPanel();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.pnlCancel.SuspendLayout();
             this.pnlSave.SuspendLayout();
@@ -90,6 +96,8 @@ namespace LKSProvFullSoft
             this.pnlDelete.SuspendLayout();
             this.pnlEdit.SuspendLayout();
             this.pnlInsert.SuspendLayout();
+            this.roundedPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -110,6 +118,7 @@ namespace LKSProvFullSoft
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1034, 839);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pnlCancel
             // 
@@ -155,9 +164,11 @@ namespace LKSProvFullSoft
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // gbInput
             // 
+            this.gbInput.Controls.Add(this.tbIdBarang);
             this.gbInput.Controls.Add(this.label7);
             this.gbInput.Controls.Add(this.label6);
             this.gbInput.Controls.Add(this.label5);
@@ -175,13 +186,21 @@ namespace LKSProvFullSoft
             this.gbInput.Size = new System.Drawing.Size(852, 302);
             this.gbInput.TabIndex = 15;
             // 
+            // tbIdBarang
+            // 
+            this.tbIdBarang.Location = new System.Drawing.Point(357, 162);
+            this.tbIdBarang.Name = "tbIdBarang";
+            this.tbIdBarang.Size = new System.Drawing.Size(28, 25);
+            this.tbIdBarang.TabIndex = 9;
+            this.tbIdBarang.Visible = false;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(524, 220);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(180, 25);
+            this.label7.Size = new System.Drawing.Size(221, 31);
             this.label7.TabIndex = 8;
             this.label7.Text = " Harga Per Satuan";
             // 
@@ -191,7 +210,7 @@ namespace LKSProvFullSoft
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(524, 127);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 25);
+            this.label6.Size = new System.Drawing.Size(93, 31);
             this.label6.TabIndex = 7;
             this.label6.Text = "Satuan";
             // 
@@ -201,7 +220,7 @@ namespace LKSProvFullSoft
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(513, 16);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(149, 25);
+            this.label5.Size = new System.Drawing.Size(182, 31);
             this.label5.TabIndex = 6;
             this.label5.Text = "Jumlah Barang";
             // 
@@ -211,7 +230,7 @@ namespace LKSProvFullSoft
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(32, 220);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 25);
+            this.label4.Size = new System.Drawing.Size(159, 31);
             this.label4.TabIndex = 5;
             this.label4.Text = "Expired Date";
             // 
@@ -221,7 +240,7 @@ namespace LKSProvFullSoft
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(32, 127);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 25);
+            this.label3.Size = new System.Drawing.Size(169, 31);
             this.label3.TabIndex = 4;
             this.label3.Text = "Nama Barang";
             // 
@@ -231,7 +250,7 @@ namespace LKSProvFullSoft
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(32, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 25);
+            this.label2.Size = new System.Drawing.Size(160, 31);
             this.label2.TabIndex = 3;
             this.label2.Text = "Kode Barang";
             // 
@@ -252,7 +271,7 @@ namespace LKSProvFullSoft
             this.tbHargaSatuan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbHargaSatuan.Location = new System.Drawing.Point(11, 10);
             this.tbHargaSatuan.Name = "tbHargaSatuan";
-            this.tbHargaSatuan.Size = new System.Drawing.Size(290, 17);
+            this.tbHargaSatuan.Size = new System.Drawing.Size(290, 21);
             this.tbHargaSatuan.TabIndex = 3;
             this.tbHargaSatuan.Enter += new System.EventHandler(this.tbHargaSatuan_Enter);
             this.tbHargaSatuan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbHargaSatuan_KeyPress);
@@ -274,7 +293,7 @@ namespace LKSProvFullSoft
             this.dtpExpired.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpExpired.Location = new System.Drawing.Point(9, 6);
             this.dtpExpired.Name = "dtpExpired";
-            this.dtpExpired.Size = new System.Drawing.Size(292, 24);
+            this.dtpExpired.Size = new System.Drawing.Size(292, 28);
             this.dtpExpired.TabIndex = 0;
             // 
             // roundedPanel4
@@ -294,9 +313,12 @@ namespace LKSProvFullSoft
             this.cbSatuan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSatuan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbSatuan.FormattingEnabled = true;
+            this.cbSatuan.Items.AddRange(new object[] {
+            "Botol",
+            "Lusin"});
             this.cbSatuan.Location = new System.Drawing.Point(9, 6);
             this.cbSatuan.Name = "cbSatuan";
-            this.cbSatuan.Size = new System.Drawing.Size(298, 27);
+            this.cbSatuan.Size = new System.Drawing.Size(298, 30);
             this.cbSatuan.TabIndex = 0;
             // 
             // roundedPanel3
@@ -316,7 +338,7 @@ namespace LKSProvFullSoft
             this.tbNamaBarang.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNamaBarang.Location = new System.Drawing.Point(10, 10);
             this.tbNamaBarang.Name = "tbNamaBarang";
-            this.tbNamaBarang.Size = new System.Drawing.Size(290, 17);
+            this.tbNamaBarang.Size = new System.Drawing.Size(290, 21);
             this.tbNamaBarang.TabIndex = 1;
             this.tbNamaBarang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNamaBarang_KeyPress);
             // 
@@ -335,9 +357,9 @@ namespace LKSProvFullSoft
             // 
             this.tbJumlahBarang.BackColor = System.Drawing.SystemColors.Control;
             this.tbJumlahBarang.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbJumlahBarang.Location = new System.Drawing.Point(10, 10);
+            this.tbJumlahBarang.Location = new System.Drawing.Point(10, 8);
             this.tbJumlahBarang.Name = "tbJumlahBarang";
-            this.tbJumlahBarang.Size = new System.Drawing.Size(290, 17);
+            this.tbJumlahBarang.Size = new System.Drawing.Size(290, 21);
             this.tbJumlahBarang.TabIndex = 5;
             this.tbJumlahBarang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbJumlahBarang_KeyPress);
             // 
@@ -358,7 +380,7 @@ namespace LKSProvFullSoft
             this.tbKodeBarang.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbKodeBarang.Location = new System.Drawing.Point(10, 9);
             this.tbKodeBarang.Name = "tbKodeBarang";
-            this.tbKodeBarang.Size = new System.Drawing.Size(290, 17);
+            this.tbKodeBarang.Size = new System.Drawing.Size(290, 21);
             this.tbKodeBarang.TabIndex = 0;
             // 
             // panel2
@@ -390,6 +412,7 @@ namespace LKSProvFullSoft
             this.dgvBarang.GridColor = System.Drawing.Color.White;
             this.dgvBarang.Location = new System.Drawing.Point(11, 9);
             this.dgvBarang.Name = "dgvBarang";
+            this.dgvBarang.RowHeadersWidth = 51;
             this.dgvBarang.Size = new System.Drawing.Size(894, 179);
             this.dgvBarang.TabIndex = 12;
             this.dgvBarang.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvBarang_MouseClick);
@@ -397,36 +420,43 @@ namespace LKSProvFullSoft
             // id
             // 
             this.id.HeaderText = "ID Barang";
+            this.id.MinimumWidth = 6;
             this.id.Name = "id";
             // 
             // kode
             // 
             this.kode.HeaderText = "Kode Barang";
+            this.kode.MinimumWidth = 6;
             this.kode.Name = "kode";
             // 
             // nama
             // 
             this.nama.HeaderText = "Nama Barang";
+            this.nama.MinimumWidth = 6;
             this.nama.Name = "nama";
             // 
             // expired
             // 
             this.expired.HeaderText = "Expired Date";
+            this.expired.MinimumWidth = 6;
             this.expired.Name = "expired";
             // 
             // jumlah
             // 
             this.jumlah.HeaderText = "Jumlah";
+            this.jumlah.MinimumWidth = 6;
             this.jumlah.Name = "jumlah";
             // 
             // satuan
             // 
             this.satuan.HeaderText = "Satuan";
+            this.satuan.MinimumWidth = 6;
             this.satuan.Name = "satuan";
             // 
             // harga
             // 
             this.harga.HeaderText = "Harga Satuan";
+            this.harga.MinimumWidth = 6;
             this.harga.Name = "harga";
             // 
             // label8
@@ -435,7 +465,7 @@ namespace LKSProvFullSoft
             this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(12, 487);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(189, 25);
+            this.label8.Size = new System.Drawing.Size(233, 31);
             this.label8.TabIndex = 13;
             this.label8.Text = "Tabel Stock Barang";
             // 
@@ -454,10 +484,14 @@ namespace LKSProvFullSoft
             // 
             this.tbSearch.BackColor = System.Drawing.SystemColors.Control;
             this.tbSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbSearch.Location = new System.Drawing.Point(12, 11);
+            this.tbSearch.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSearch.ForeColor = System.Drawing.Color.Gray;
+            this.tbSearch.Location = new System.Drawing.Point(12, 9);
             this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(256, 14);
+            this.tbSearch.Size = new System.Drawing.Size(256, 22);
             this.tbSearch.TabIndex = 4;
+            this.tbSearch.Enter += new System.EventHandler(this.tbSearch_Enter);
+            this.tbSearch.Leave += new System.EventHandler(this.tbSearch_Leave);
             // 
             // btnSearch
             // 
@@ -471,6 +505,7 @@ namespace LKSProvFullSoft
             this.btnSearch.Size = new System.Drawing.Size(30, 31);
             this.btnSearch.TabIndex = 16;
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // pnlDelete
             // 
@@ -493,6 +528,7 @@ namespace LKSProvFullSoft
             this.btnDelete.TabIndex = 0;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // pnlEdit
             // 
@@ -515,6 +551,7 @@ namespace LKSProvFullSoft
             this.btnEdit.TabIndex = 0;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // pnlInsert
             // 
@@ -543,23 +580,81 @@ namespace LKSProvFullSoft
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(398, 31);
+            this.label1.Location = new System.Drawing.Point(398, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 31);
+            this.label1.Size = new System.Drawing.Size(226, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Kelola Barang";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(132, 47);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(165, 50);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Gudang";
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(134, 459);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(160, 83);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Kelola Barang";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // roundedPanel7
+            // 
+            this.roundedPanel7.BackColor = System.Drawing.Color.SkyBlue;
+            this.roundedPanel7.Controls.Add(this.btnLogout);
+            this.roundedPanel7.CornerRadius = 10;
+            this.roundedPanel7.Location = new System.Drawing.Point(91, 605);
+            this.roundedPanel7.Name = "roundedPanel7";
+            this.roundedPanel7.Size = new System.Drawing.Size(234, 44);
+            this.roundedPanel7.TabIndex = 10;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Location = new System.Drawing.Point(3, 0);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(228, 44);
+            this.btnLogout.TabIndex = 0;
+            this.btnLogout.Text = "Log Out";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(37, 110);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(346, 317);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmGudang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1364, 749);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.roundedPanel7);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmGudang";
             this.Text = "frmGudang";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmGudang_FormClosed);
             this.Load += new System.EventHandler(this.frmGudang_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -584,7 +679,10 @@ namespace LKSProvFullSoft
             this.pnlDelete.ResumeLayout(false);
             this.pnlEdit.ResumeLayout(false);
             this.pnlInsert.ResumeLayout(false);
+            this.roundedPanel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -634,5 +732,11 @@ namespace LKSProvFullSoft
         private System.Windows.Forms.Button btnCancel;
         private RoundedPanel pnlSave;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.TextBox tbIdBarang;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private RoundedPanel roundedPanel7;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

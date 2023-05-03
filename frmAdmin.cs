@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,9 @@ namespace LKSProvFullSoft
 
         private void frmAdmin_Load(object sender, EventArgs e)
         {
+            dgvActivity.ReadOnly = Enabled;
+            dgvReport.ReadOnly = Enabled;
+            dgvUser.ReadOnly = Enabled;
             FormRefresh("activity");
         }
 
@@ -33,13 +37,22 @@ namespace LKSProvFullSoft
                 case "user":
                     pnlUser.Visible = true;
                     pnlActivity.Visible = false;
+                    pnlLaporan.Visible = false;
                     PanelUserInit();
                     break;
 
                 case "activity":
                     pnlActivity.Visible = true;
                     pnlUser.Visible = false;
+                    pnlLaporan.Visible = false;
                     PanelActivityInit();
+                    break;
+
+                case "laporan":
+                    pnlLaporan.Visible = true;
+                    pnlUser.Visible = false;
+                    pnlActivity.Visible = false;
+                    PanelLaporanInit();
                     break;
             }
         }
@@ -122,7 +135,6 @@ namespace LKSProvFullSoft
             return result;
         }
 
-
         public void InputState(bool main, bool sc)
         {
             pnlInsert.Visible = main;
@@ -145,12 +157,12 @@ namespace LKSProvFullSoft
 
         private void tbNama_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar);
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
         private void tbUsername_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar);
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
         private void tbTelepon_KeyPress(object sender, KeyPressEventArgs e)
@@ -252,13 +264,128 @@ namespace LKSProvFullSoft
 
         private void pnlActivity_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
             comp.SetSql($"INSERT INTO tbl_log (aktivitas, id_user) VALUES ('Logout', {Gv.uid});");
             Application.Restart();
+        }
+
+        //Panel Laporan
+
+        public void PanelLaporanInit()
+        {
+            dtpFrom.Region = new Region(new Rectangle(1, 1, dtpFrom.Width - 2, dtpFrom.Height - 2));
+            dtpTo.Region = new Region(new Rectangle(1, 1, dtpTo.Width - 2, dtpTo.Height - 2));
+            pnlChart.Enabled = false;
+            AddDataToReport();
+        }
+
+        public int GetOmset(int month, int year)
+        {
+            var firstdaymonth = new DateTime(year, month, 1);
+            var lastdaymonth = firstdaymonth.AddMonths(1).AddDays(-1);
+            DataTable dt = new DataTable();
+            dt = comp.GetSql($"select total_bayar from tbl_transaksi where tgl_transaksi between '{firstdaymonth:yyyy-MM-dd}' and '{lastdaymonth:yyyy-MM-dd}'");
+            if (dt.Rows.Count > 0)
+            {
+                int omset = int.Parse(dt.Rows[0][0].ToString());
+                return omset;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public void GetReport()
+        {
+            int FromMonth = dtpFrom.Value.Month;
+            int toMonth = dtpTo.Value.Month;
+            int FromYear = dtpFrom.Value.Year;
+            int ToYear = dtpTo.Value.Year;
+
+            if (FromMonth > toMonth && FromYear > ToYear) return;
+
+            crtReport.Series["Omset"].Points.Clear();
+
+            for (int year = FromYear; year <= ToYear; year++)
+            {
+                for (int month = 1; month < 12; month++)
+                {
+                    if (month < FromMonth) continue;
+                    if (month > toMonth) continue;
+
+                    var MonthNames = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(month);
+                    var omset = GetOmset(month, year);
+
+                    crtReport.Series["Omset"].Points.AddXY(MonthNames, omset);
+                }
+            }
+        }
+
+        public void AddDataToReport()
+        {
+            DataTable dt = new DataTable();
+            dt = comp.GetSql("select T.id_transaksi, T.no_transaksi, T.tgl_transaksi, T.total_bayar, U.nama from tbl_transaksi T inner join tbl_user U on U.id_user = T.id_user");
+
+            foreach (DataRow row in dt.Rows)
+            {
+                int id = (int)row[0];
+                string noTransaksi = row[1].ToString();
+                DateTime date = (DateTime)row[2];
+                int total = int.Parse(row[3].ToString());
+                string nama = row[4].ToString();
+
+                //conversi
+
+                string idx = $"TR{id:000}";
+                var idculture = new CultureInfo("id-ID");
+                string tanggalx = date.ToString("dddd, dd/MM/yyyy", idculture);
+                string totalx = $"Rp. {total:#,0}";
+
+                dgvReport.Rows.Add(noTransaksi, tanggalx, totalx, nama);
+            }
+        }
+
+        public bool ValidateFromTo()
+        {
+            bool result = true;
+            var from = dtpFrom.Value;
+            var to = dtpTo.Value;
+
+            if (from >= to)
+            {
+                MessageBox.Show("Tidak Bisa Mundur Waktu", "Information", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                result = false;
+            }
+            return result;
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            FormRefresh("laporan");
+        }
+
+        private void btnFilterReport_Click(object sender, EventArgs e)
+        {
+            if (!ValidateFromTo()) return;
+
+            if (dgvReport.Rows.Count > 0)
+            {
+                pnlChart.Enabled = true;
+            }
+        }
+
+        private void frmAdmin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnGenerate_Click(object sender, EventArgs e)
+        {
+            GetReport();
         }
     }
 }
